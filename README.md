@@ -8,22 +8,22 @@ The rewrite is automatically removed during the action's post-job cleanup.
 
 ```yaml
 - name: Configure Git authentication
-  uses: helax-homelab-actions/git-url-auth@v1
+  uses: helax-actions/git-url-auth@v1
   with:
     token: ${{ steps.app-token.outputs.token }}
-    repository: helax-homelab/homelab-toolbox
+    repository: helax-ecosystem/toolbox
 ```
 
 The action configures Git to rewrite the SSH URL for the specified repository:
 
 ```text
-ssh://git@github.com/helax-homelab/homelab-toolbox.git
+ssh://git@github.com/helax-ecosystem/toolbox.git
 ```
 
 to an authenticated HTTPS URL using the provided token:
 
 ```text
-https://x-access-token:<token>@github.com/helax-homelab/homelab-toolbox.git
+https://x-access-token:<token>@github.com/helax-ecosystem/toolbox.git
 ```
 
 Only the specified repository is affected by the rewrite.
@@ -58,13 +58,13 @@ It can be composed with [`actions/create-github-app-token`](https://github.com/a
   with:
     client-id: ${{ secrets.CLIENT_ID }}
     private-key: ${{ secrets.PRIVATE_KEY }}
-    owner: helax-homelab
-    repositories: homelab-toolbox
+    owner: helax-ecosytem
+    repositories: toolbox
     permission-contents: read
 
 - name: Configure Git authentication
-  uses: helax-homelab-actions/git-url-auth@v1
+  uses: helax-actions/git-url-auth@v1
   with:
     token: ${{ steps.app-token.outputs.token }}
-    repository: helax-homelab/homelab-toolbox
+    repository: helax-ecosystem/toolbox
 ```
