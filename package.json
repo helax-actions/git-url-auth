@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/helax-homelab-actions/git-url-auth.git"
+    "url": "git+https://github.com/helax-actions/git-url-auth.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/helax-homelab-actions/git-url-auth/issues"
+    "url": "https://github.com/helax-actions/git-url-auth/issues"
   },
-  "homepage": "https://github.com/helax-homelab-actions/git-url-auth#readme",
+  "homepage": "https://github.com/helax-actions/git-url-auth#readme",
   "dependencies": {
     "@actions/core": "^3.0.1"
   },
